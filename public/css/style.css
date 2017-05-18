@@ -617,6 +617,9 @@ header {
 .authentication-submit-button{
 	margin-top: 8%;
 }
+/*.authentication-input{
+	maxlength:"10";
+}*/
 .authentication-label,
 .authentication-submit-button{
 	color: rgb(0,0,0);
