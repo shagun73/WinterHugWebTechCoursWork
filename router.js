@@ -3,14 +3,22 @@
 	var types, banned;
 
 function route(handle, pathname, response, postdata) {
-	 console.log("routing request of " + pathname);
+	 
+     console.log("routing request of " + pathname);
 	 banned = [];
 	 banUpperCase("./public/", "");
 	 types = defineTypes();
-     if (pathname.endsWith("/")) pathname = pathname + "index.html";
+
+     if (pathname.endsWith("/")){
+        pathname = pathname + "index.html";
+     }       
 	 var type = findType(pathname); 
 
-     if(type == null){
+    console.log("****************************************the type of the request is :" + type);
+    
+     if (isBanned(pathname)) {
+         return fail(response, NotFound, "URL has been banned");
+     }else if(type == null){
 	 	return fail(response, BadType, "File type unsupported");
 	 }else{
 	 	if (typeof handle[pathname] === 'function') {
