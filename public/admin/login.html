@@ -7,16 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
 </head>
 <body id="login-page-top">
+	
 	<div class="authentication-container">
-		<p class="link-heading">Winter Hug Login</p>
-		<div>
-			<p>Username</p>
-			<input type="Username" name=""></input>
-		</div>
-		<div>
-			<p>Password</p>
-			<input type="Password" name=""></input>
-		</div>
+		<p class="link-heading login-heading">Winter Hug Login</p>
+		<form action="/authentication">
+			<div class="authentication-inner-container">
+				<label class="authentication-label">Username: </label>
+	  			<input type="username" name="username"></input>
+	  		</div>
+	  		<div class="authentication-inner-container">
+	  			<label class="authentication-label">Password: </label>
+	  			<input type="password" name="password"></input>
+	  		</div>
+	  		<input type="submit" value="Submit" class="authentication-submit-button"></input>
+	  		<div class="authentication-inner-container forgot-password">
+	  			<a href="forgot-password-link">Forgot Password?</a>
+	  		</div>
+		</form> 
 	</div>
 </body>
 </html>

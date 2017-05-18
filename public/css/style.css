@@ -198,7 +198,8 @@ input[type=checkbox]:checked ~ #menu{
 .home-heading, 
 .header-subquote,
 .header-subquote-non-home,
-.text-faded,
+.text-faded, 
+.authentication-label,
 h2{
 	font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
 	color: rgb(255,255,255);
@@ -225,7 +226,8 @@ h2{
 	/*padding: 20px;*/
 }
 
-.btn-primary{
+.btn-primary,
+.authentication-submit-button{
 	padding: 15px 30px;
 	border-radius: 300px;
     font-weight: 700;
@@ -330,7 +332,6 @@ header {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
-/*link images to be 30% of total width*/
 .link-image{
 	max-height: 30%;
 	max-width: 30%;
@@ -374,7 +375,6 @@ header {
 .footer-all-link-elements{
 	float: left;
 	text-align: center;
-	/*width: 20%;*/
 	padding: 0px 20px;
 	margin-right: auto;
 	margin-left: auto;
@@ -411,7 +411,6 @@ header {
 	margin-top: 2%;
 }
 .socialmedia-icon{
-	/*width: 30%;*/
 	max-width: 40%;
 	max-height: 100px;
 }
@@ -424,9 +423,9 @@ header {
 	background: rgb(255, 255, 255);
 	min-width: inherit;
 }
-.policy-and-social-media-div{
+/*.policy-and-social-media-div{
 	/*display: inline-block;*/
-}
+/*}*/
 .policy-hr{
 	max-width: 100%;
 	margin-top: 20px;
@@ -591,7 +590,6 @@ header {
 
 }
 .hr-left{
-	/*border: 2px solid rgb(255, 255, 255);*/
 	margin-top: 20px;
 	margin-bottom: 20px;
 	margin-left: 0%;
@@ -606,7 +604,28 @@ header {
 /************************************************************* Login page ***************************************************/
 .authentication-container{
 	text-align: center;
-	width: 50%;
-	height: 50%;
-	
+	margin: auto;
+	width: 30%;
+	height: 30%;
+	padding: 5% 5%;
+}
+.login-heading{
+	font-weight: 900;
+	color: rgb(66, 167, 244);
+}
+.authentication-inner-container,
+.authentication-submit-button{
+	margin-top: 8%;
+}
+.authentication-label,
+.authentication-submit-button{
+	color: rgb(0,0,0);
+	font-weight: 800;
+}
+.authentication-submit-button{
+	padding: 2% 2%;
+	border-radius: 30%;
+}
+.forgot-password-link{
+	color: rgb(66, 167, 244); 
 }
