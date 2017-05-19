@@ -28,7 +28,7 @@ div{
 	transition-timing-function: linear;
 	transition: all 500ms ease;
 }
-p, .transitions{
+.transitions{
     transition-timing-function: linear;
     transition: all 500ms;
   }
@@ -583,32 +583,63 @@ header {
 }
 
 /************************************************************ Cookie policy page ********************************************/
-.privacy-policy-div,
-.cookie-stmt-div
+.privacy-policy-div
 {
-	width: 90%;
-	margin-top: 100px;
-	margin-bottom: 10px;
+	width: 80%;
+	margin-top: 10%;
+	margin-bottom: 3%;
 	margin-left: 5%;
+	transition: 0s;
+}
+.cookie-stmt-div,
+.refund-donation-div
+{
+	width: 80%;
+	margin-top: 5%;
+	margin-bottom: 3%;
+	margin-left: 5%;
+	transition: 0s;
 }
 .policy-content,
 .cookie-content{
-	width: 90%;
-	margin-right: 5%;
+	width: 80%;
+	margin-right: 10%;
 	margin-left: 5%;
-
+	transition: 0s;
 }
 .hr-left{
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 2%;
+	margin-bottom: 2%;
 	margin-left: 0%;
 }
 .full-line{
 	max-width: 100%;
-	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-top: 5%;
+	margin-bottom: 0%;
 	margin-left: 0%;
 
+}
+a.mail-winter-hug:hover,
+a.mail-winter-hug:focus
+{
+  color: rgba(0,0,0,0.8);
+  border-bottom: 1px solid rgba(0,0,0,0.8);
+  transition: border-color .5s ease-in;
+}
+.noTransition {
+    transition: none;
+}
+@media screen and (max-width : 550px){
+.privacy-policy-div
+{
+	margin-top: 25%;
+}
+}
+@media screen and (max-width : 400px){
+.privacy-policy-div
+{
+	margin-top: 35%;
+}
 }
 /************************************************************* Login page ***************************************************/
 .authentication-container{
