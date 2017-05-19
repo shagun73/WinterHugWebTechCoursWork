@@ -12,7 +12,8 @@ var handle = {}
  handle["/cookiepolicy.html"] = requestHandlers.cookiepolicy;
 
  handle["/login.html"] = requestHandlers.login;
-
+ handle["/dashboard.html"] = requestHandlers.dashboard;
+ 
  handle["/css/style.css"] = requestHandlers.style;
 
  handle["/img/main.jpg"] = requestHandlers.headerImage;
@@ -34,8 +35,6 @@ var handle = {}
  handle["/img/socialmediaicon/instagram.png"] = requestHandlers.instagram;
  handle["/img/socialmediaicon/snapchat.png"] = requestHandlers.snapchat;
  handle["/img/socialmediaicon/twitter.png"] = requestHandlers.twitter;
-
-
 
  handle["/img/missionVision.jpg"] = requestHandlers.missionVisionImage;
  handle["/img/shareWarmth.jpg"] = requestHandlers.shareWarmthImage;

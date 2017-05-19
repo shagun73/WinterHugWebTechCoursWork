@@ -13,8 +13,6 @@ function route(handle, pathname, response, postdata) {
         pathname = pathname + "index.html";
      }       
 	 var type = findType(pathname); 
-
-    console.log("****************************************the type of the request is :" + type);
     
      if (isBanned(pathname)) {
          return fail(response, NotFound, "URL has been banned");

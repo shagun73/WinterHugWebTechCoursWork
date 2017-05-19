@@ -1,8 +1,10 @@
+var database = require("./public/js/database");
 var fs = require("fs");
 var OK = 200;
 
 var querystring = require("querystring");
 
+// ******************************************************************************* html *************************************************************************
 function index(response, postData, pathname, type) {
  	console.log("index request is handled");
 	 var file = "./public" + pathname;
@@ -52,12 +54,31 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+ function dashboard(response, postData, pathname, type){
+	console.log("dashboard html request is handled");
+	returnedValue = database.helloworld(pathname);
+	console.log("***************************************************************" + returnedValue)
+	// var formData = querystring.parse(postData);
+	// formData.UserName
+	// var file = "./public/admin" + pathname;
+	// fs.readFile(file, ready);
+	// function ready(err, content) { deliver(response, type, err, content);}
+}
+
+// ************************************************************************************* css *********************************************************************
+
 function style(response, postData, pathname, type){
 	console.log("style.css request is handled");	
 	var file = "./public" + pathname;
 	fs.readFile(file, ready);
 	function ready(err, content) { deliver(response, type, err, content);}
 }
+
+// ***************************************************************************************javascript******************************************************************
+
+
+
+// *****************************************************************************images*****************************************************************************
 
 function headerImage(response, postData, pathname, type){
 	console.log("main page headerImage request is handled");	
@@ -180,7 +201,8 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.cookiepolicy = cookiepolicy;
 
  exports.login = login;
- 
+ exports.dashboard = dashboard;
+
  exports.style = style;
 
  exports.headerImage = headerImage;

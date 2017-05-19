@@ -19,6 +19,7 @@ header{
     background-size: cover; 
 }
 footer{
+	text-align: center;
 	min-height: auto;
 	position: relative;
 	clear: both;
@@ -432,9 +433,9 @@ header {
 	background: rgb(255, 255, 255);
 	min-width: inherit;
 }
-/*.policy-and-social-media-div{
-	/*display: inline-block;*/
-/*}*/
+.policy-and-social-media-div-inner{
+	text-align: left;
+}
 .policy-hr{
 	max-width: 100%;
 	margin-top: 20px;
@@ -610,7 +611,7 @@ header {
 	margin-left: 0%;
 
 }
-/************************************************************* Login page ***************************************************/
+/******************************************************** Login page **********************************************************/
 .authentication-container{
 	text-align: center;
 	margin: auto;

@@ -10,14 +10,14 @@
 	
 	<div class="authentication-container">
 		<p class="link-heading login-heading">Winter Hug Login</p>
-		<form action="/authentication">
+		<form action="/dashboard.html" method="post">
 			<div class="authentication-inner-container">
 				<label class="authentication-label">Username: </label>
-	  			<input type="username" name="username" maxlength="50"></input>
+	  			<input type="username" id="username" name="username" maxlength="50"></input>
 	  		</div>
 	  		<div class="authentication-inner-container">
 	  			<label class="authentication-label">Password: </label>
-	  			<input type="password" name="password" maxlength="50"></input>
+	  			<input type="password" id="password" name="password" maxlength="50"></input>
 	  		</div>
 	  		<input type="submit" value="Submit" class="authentication-submit-button"></input>
 	  		<div class="authentication-inner-container forgot-password">

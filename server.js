@@ -25,7 +25,7 @@
 			 var postData = "";
 			 var pathname = url.parse(lowerUrl).pathname;
 
-			 console.log("Request for" + pathname + " is received.");
+			 console.log("Request for " + pathname + " is received.");
 			 
 			 request.setEncoding("utf8");			 
 			 request.addListener("data", function(postDataChunk) {
