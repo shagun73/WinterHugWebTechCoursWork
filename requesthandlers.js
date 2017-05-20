@@ -47,6 +47,13 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+  function donate(response, postData, pathname, type) {
+ 	console.log("donate html page is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+
   function login(response, postData, pathname, type) {
  	 console.log("login html page is handled");
 	 var file = "./public/admin" + pathname;
@@ -113,6 +120,13 @@ function whoWeAreImage(response, postData, pathname, type){
 
 function whatwedoImage(response, postData, pathname, type){
 	console.log("whatwedo Image request is handled");	
+	var file = "./public" + pathname;
+	fs.readFile(file, ready);
+	function ready(err, content) { deliver(response, type, err, content);}
+}
+
+function donateImage(response, postData, pathname, type){
+	console.log("donate Image request is handled");	
 	var file = "./public" + pathname;
 	fs.readFile(file, ready);
 	function ready(err, content) { deliver(response, type, err, content);}
@@ -199,6 +213,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.getinvolved = getinvolved;
  exports.wherewework = wherewework;
  exports.cookiepolicy = cookiepolicy;
+ exports.donate = donate;
 
  exports.login = login;
  exports.dashboard = dashboard;
@@ -212,6 +227,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.whoWeAreImage = whoWeAreImage;
  exports.whatwedoImage = whatwedoImage;
  exports.getInvolvedImage = getInvolvedImage;
+ exports.donateImage = donateImage;
 
  exports.newsImage1 = newsImage1;
  exports.newsImage2 = newsImage2;

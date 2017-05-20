@@ -10,6 +10,7 @@ var handle = {}
  handle["/getinvolved.html"] = requestHandlers.getinvolved;
  handle["/wherewework.html"] = requestHandlers.wherewework;
  handle["/cookiepolicy.html"] = requestHandlers.cookiepolicy;
+ handle["/donate.html"] = requestHandlers.donate;
 
  handle["/login.html"] = requestHandlers.login;
  handle["/dashboard.html"] = requestHandlers.dashboard;
@@ -21,6 +22,7 @@ var handle = {}
  handle["/img/whoweare.jpg"] = requestHandlers.whoWeAreHeaderImage;
  handle["/img/getinvolved.jpg"] = requestHandlers.getInvolvedHeaderImage;
  handle["/img/wherewework.jpg"] = requestHandlers.whereWeWorkHeaderImage;
+ handle["/img/donate.jpg"] = requestHandlers.donateImage;
 
  handle["/img/linkimage/fullsize/whoweare.png"] = requestHandlers.whoWeAreImage;
  handle["/img/linkimage/fullsize/whatwedo.png"] = requestHandlers.whatwedoImage;
