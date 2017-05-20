@@ -63,10 +63,10 @@ function whatwedo(response, postData, pathname, type) {
 
  function dashboard(response, postData, pathname, type){
 	console.log("dashboard html request is handled");
-	returnedValue = database.helloworld(pathname);
-	console.log("***************************************************************" + returnedValue)
-	// var formData = querystring.parse(postData);
-	// formData.UserName
+
+	var formData = querystring.parse(postData);
+	returnedValue = database.authentication(formData.username, formData.password);
+	console.log("************************************" + returnedValue);
 	// var file = "./public/admin" + pathname;
 	// fs.readFile(file, ready);
 	// function ready(err, content) { deliver(response, type, err, content);}
