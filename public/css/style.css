@@ -25,10 +25,7 @@ footer{
 	clear: both;
 	padding: 40px 40px 0px 40px;
 }
-div{
-	transition-timing-function: linear;
-	transition: all 500ms ease;
-}
+
 .transitions{
     transition-timing-function: linear;
     transition: all 500ms;
