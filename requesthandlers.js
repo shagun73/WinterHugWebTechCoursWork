@@ -65,11 +65,13 @@ function whatwedo(response, postData, pathname, type) {
 	console.log("dashboard html request is handled");
 
 	var formData = querystring.parse(postData);
-	returnedValue = database.authentication(formData.username, formData.password);
-	console.log("************************************" + returnedValue);
-	// var file = "./public/admin" + pathname;
-	// fs.readFile(file, ready);
-	// function ready(err, content) { deliver(response, type, err, content);}
+	database.authentication(formData.username, formData.password, function(result){
+		if(result == 1){
+			var file = "./public/admin" + pathname;
+			fs.readFile(file, ready);
+			function ready(err, content) { deliver(response, type, err, content);}
+		}
+	});
 }
 
 // ************************************************************************************* css *********************************************************************
