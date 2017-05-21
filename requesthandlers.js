@@ -1,4 +1,4 @@
-var database = require("./public/js/database");
+var database = require("./public/js/server/database");
 var fs = require("fs");
 var OK = 200;
 
@@ -70,6 +70,8 @@ function whatwedo(response, postData, pathname, type) {
 			var file = "./public/admin" + pathname;
 			fs.readFile(file, ready);
 			function ready(err, content) { deliver(response, type, err, content);}
+		}else{
+
 		}
 	});
 }

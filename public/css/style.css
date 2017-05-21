@@ -717,3 +717,6 @@ a.mail-winter-hug:focus
 .forgot-password-link{
 	color: rgb(66, 167, 244); 
 }
+.authentication-warning{
+	color: rgb(255,0,0);
+}
