@@ -87,7 +87,12 @@ function style(response, postData, pathname, type){
 
 // ***************************************************************************************javascript******************************************************************
 
-
+function scriptLogin(response, postData, pathname, type){
+	console.log("login script request is handled");	
+	var file = "./public" + pathname;
+	fs.readFile(file, ready);
+	function ready(err, content) { deliver(response, type, err, content);}
+}
 
 // *****************************************************************************images*****************************************************************************
 
@@ -223,6 +228,8 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.dashboard = dashboard;
 
  exports.style = style;
+
+ exports.scriptLogin = scriptLogin;
 
  exports.headerImage = headerImage;
  exports.whoWeAreHeaderImage = whoWeAreHeaderImage;
