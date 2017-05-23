@@ -1,6 +1,5 @@
 
 var sqlite3 = require('sqlite3').verbose();
-var db = new sqlite3.Database('C:/Users/user/Documents/GitHub/WinterHugWebTechCW/public/database/WinterHug.db');
 
 function authentication(un, pass, callback) {
   "use strict"
