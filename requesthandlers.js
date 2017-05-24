@@ -19,6 +19,13 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+ function blog(response, postData, pathname, type) {
+ 	 console.log("blog request is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+
  function whoweare(response, postData, pathname, type) {
  	 console.log("who we are html is handled");
 	 var file = "./public" + pathname;
@@ -257,6 +264,7 @@ function shareWarmthImage(response, postData, pathname, type){
 
  exports.index = index;
  exports.whatwedo = whatwedo;
+ exports.blog = blog;
  exports.whoweare = whoweare;
  exports.getinvolved = getinvolved;
  exports.wherewework = wherewework;
