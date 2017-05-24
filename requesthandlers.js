@@ -26,6 +26,13 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+ function defaultprofile(response, postData, pathname, type) {
+ 	 console.log("default profile picture request is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+ 
  function whoweare(response, postData, pathname, type) {
  	 console.log("who we are html is handled");
 	 var file = "./public" + pathname;
@@ -87,7 +94,7 @@ function whatwedo(response, postData, pathname, type) {
      fs.readFile(file, ready);
      function ready(err, content) { deliver(response, type, err, content); }
  }
- // handle["/forgetpassword.html"] = requestHandlers.forgetpassword;
+
  function dashboard(response, postData, pathname, type){
 	console.log("dashboard html request is handled");
 
@@ -292,6 +299,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.getInvolvedImage = getInvolvedImage;
  exports.donateImage = donateImage;
 
+ exports.defaultprofile = defaultprofile;
  exports.newsImage1 = newsImage1;
  exports.newsImage2 = newsImage2;
  exports.newsImage3 = newsImage3;

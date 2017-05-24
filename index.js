@@ -36,6 +36,8 @@ var handle = {}
  handle["/img/linkimage/fullsize/whatwedo.png"] = requestHandlers.whatwedoImage;
  handle["/img/linkimage/fullsize/contribute.png"] = requestHandlers.getInvolvedImage;
 
+ handle["/img/defaultprofile.png"] = requestHandlers.defaultprofile;
+
  handle["/img/news/foxnews1.jpg"] = requestHandlers.newsImage1;
  handle["/img/news/foxnews2.jpg"] = requestHandlers.newsImage2;
  handle["/img/news/foxnews3.jpg"] = requestHandlers.newsImage3;

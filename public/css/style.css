@@ -664,9 +664,6 @@ a.mail-winter-hug:focus
 .authentication-submit-button{
 	margin-top: 8%;
 }
-/*.authentication-input{
-	maxlength:"10";
-}*/
 .authentication-label,
 .authentication-submit-button{
 	color: rgb(0,0,0);
@@ -809,4 +806,12 @@ a.mail-winter-hug:focus
 		padding-top: 35%;
 		margin-bottom: 80%;
 	}
+}
+/************************************************************* blog page ***************************************************/
+.blog-default-image{
+	max-width: 18%;
+	max-height: 18%;
+}
+.blog-heading{
+	text-transform: uppercase;
 }
