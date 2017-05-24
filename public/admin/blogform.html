@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"></meta>
+	<title>WINTER HUG</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta> 
+	<link rel="stylesheet" type="text/css" href="css/style.css"></link>
+</head>
+<body id="login-page-top">
+	<nav id="mainNav" class="navbar">
+		<div class="header-container">
+			<a class="navbar-brand" href="/index.html">WINTER HUG</a>
+		</div>
+		<div class="nav-list-conatiner logout-button" >
+			<a class="navbar-brand" href="/login.html">LOGOUT</a>
+		</div>	
+	</nav>
+	<div class="authentication-container blog-form-container">
+		<p class="link-heading login-heading">Winter Hug Blog</p>
+		<form action="/dashboard.html" method="post" id="authentication-form">
+			<div class="authentication-inner-container">
+				<label class="authentication-label blog-form">TOPIC : </label>
+	  			<input type="title" id="topic" name="title" maxlength="200" class="form-input-topic"></input>
+	  		</div>
+	  		<div class="authentication-inner-container blogform-inner-container">
+	  			<label class="authentication-label blog-form">TEXT : </label>
+	  			<textarea id="blog-text" name="blogText" maxlength="10000" class="form-input-text" rows="20"></textarea>
+	  		</div>
+	  		<div class="authentication-inner-container blogform-inner-container">
+	  			<label class="authentication-label blog-form">YOUR IMAGE : </label>
+	  			<input type="file" name="pic" id="pic"></input>
+	  		</div>
+	  		<input type="submit" value="Submit" class="authentication-submit-button" id="blog-form-submit"></input>
+		</form> 
+	</div>
+</body>
+</html>

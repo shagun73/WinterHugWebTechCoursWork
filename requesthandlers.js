@@ -61,6 +61,13 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+ function forgetpassword(response, postData, pathname, type) {
+ 	 console.log("forgot password html page is handled");
+	 var file = "./public/admin" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+ // handle["/forgetpassword.html"] = requestHandlers.forgetpassword;
  function dashboard(response, postData, pathname, type){
 	console.log("dashboard html request is handled");
 
@@ -71,10 +78,29 @@ function whatwedo(response, postData, pathname, type) {
 			fs.readFile(file, ready);
 			function ready(err, content) { deliver(response, type, err, content);}
 		}else{
-
+			// content = '{"error" : "login details not currect"}';
+			content = "login details not currect";
+			// var JsonObj = JSON.parse(content);
+			type = "text/plain";
+			var err;
+			deliver(response, type, err, content);
 		}
 	});
 }
+
+function blogform(response, postData, pathname, type) {
+ 	 console.log("blog form html page is handled");
+	 var file = "./public/admin" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+
+ function newsform(response, postData, pathname, type) {
+ 	 console.log("news form html page is handled");
+	 var file = "./public/admin" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
 
 // ************************************************************************************* css *********************************************************************
 
@@ -225,7 +251,10 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.donate = donate;
 
  exports.login = login;
+ exports.forgetpassword = forgetpassword;
  exports.dashboard = dashboard;
+ exports.blogform = blogform;
+ exports.newsform = newsform;
 
  exports.style = style;
 
