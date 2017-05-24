@@ -30,6 +30,7 @@ footer{
     transition-timing-function: linear;
     transition: all 500ms;
   }
+
 hr{
 	max-width: 80px;
 	border: 1px solid rgb(66, 167, 244);
@@ -632,29 +633,14 @@ a.mail-winter-hug:focus
 .noTransition {
     transition: none;
 }
-@media screen and (max-width : 550px){
-.privacy-policy-div
-{
-	margin-top: 25%;
-}
-}
-@media screen and (max-width : 400px){
-.privacy-policy-div,.header-content
-{
-	margin-top: 35%;
-}
-.donate-content{
-	/*min-height: 60%;*/
-	padding-top: 35%;
-}
-}
+
 /************************************************************* Donate page ***************************************************/
 .donate-content{
 	position: relative;
 	max-width: 80%;
 	max-height: 10%;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 25%;
+	margin-right: 25%;
 	text-align: center;
 	margin-top: 15%;
 	z-index: 0;
@@ -671,16 +657,47 @@ a.mail-winter-hug:focus
 	margin-right: 5%;
 	margin-bottom: 0%;
 }
-.donate-optins{
+/*.donate-options{
 	align-content: center;
 	font-size: 20px;
 	margin-top: 1.3em;
 	margin-bottom: 1.3em;
 	/*padding: 20px;*/
-}
+}*/
 .donate-now{
 	height: auto;
 	align-content: center;
+}
+/************************************************************* Donate Form ***************************************************/
+.donate-form{
+	/*margin-top: 10%;*/
+	height: 100%;
+	width: 100%;
+	align-content: center;
+	background: url("../img/donate.jpg") no-repeat center center fixed;
+}
+.donate-form-content{
+	position: relative;
+	max-width: 80%;
+	min-height: 100%;
+	margin-left: 15%;
+	margin-right: 15%;
+	text-align: center;
+	/*margin-top: 15%;*/
+	z-index: 0;
+	align-content: center;
+	background-color: rgb(186, 187, 188);
+}
+.details-field-name{
+	color: rgb(0,0,0)
+	font-weight:600;
+}
+.account-details{
+	font-weight: 400;
+	font-size: 25px;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	text-align: left;
 }
 
 /************************************************************* Login page ***************************************************/
@@ -716,4 +733,45 @@ a.mail-winter-hug:focus
 }
 .authentication-warning{
 	color: rgb(255,0,0);
+}
+/************************************************************* contact-us page ***************************************************/
+.contact-us-container{
+	height: 90%;
+	width: 100%;
+	margin-top: 10%;
+	display: block;
+	text-align: center;
+	align-content: center;
+	margin-bottom: 0%;
+}
+.contact-details{
+	/*margin-left: 5%;*/
+	margin-top: 0;
+	align-content: center;
+	width: 100%;
+	text-align: center;
+}
+.dark-font-weight{
+	font-weight: 700;
+}
+
+@media screen and (max-width : 550px){
+.privacy-policy-div
+{
+	margin-top: 25%;
+}
+}
+@media screen and (max-width : 400px){
+.privacy-policy-div,.header-content
+{
+	margin-top: 35%;
+}
+.donate-content{
+	/*min-height: 60%;*/
+	padding-top: 35%;
+}
+.contact-us-container{
+	padding-top: 35%;
+	margin-bottom: 80%;
+}
 }

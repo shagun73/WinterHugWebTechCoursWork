@@ -54,6 +54,19 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+ function donateform(response, postData, pathname, type) {
+ 	console.log("donate-form html page is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+ function contactus(response, postData, pathname, type) {
+ 	console.log(" contactus html page is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+
   function login(response, postData, pathname, type) {
  	 console.log("login html page is handled");
 	 var file = "./public/admin" + pathname;
@@ -223,6 +236,8 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.wherewework = wherewework;
  exports.cookiepolicy = cookiepolicy;
  exports.donate = donate;
+ exports.donateform = donateform;
+ exports.contactus = contactus;
 
  exports.login = login;
  exports.dashboard = dashboard;

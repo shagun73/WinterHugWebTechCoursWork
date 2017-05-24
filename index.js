@@ -11,6 +11,8 @@ var handle = {}
  handle["/wherewework.html"] = requestHandlers.wherewework;
  handle["/cookiepolicy.html"] = requestHandlers.cookiepolicy;
  handle["/donate.html"] = requestHandlers.donate;
+ handle["/donateform.html"] = requestHandlers.donateform;
+ handle['/contactus.html'] = requestHandlers.contactus;
 
  handle["/login.html"] = requestHandlers.login;
  handle["/dashboard.html"] = requestHandlers.dashboard;
