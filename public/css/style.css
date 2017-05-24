@@ -449,7 +449,6 @@ header {
 	margin-bottom: 3%;
 }
 .policy-div{
-	/*margin-left: 20px;*/
 	display: inline-block;
 }
 .policy-element
@@ -634,6 +633,60 @@ a.mail-winter-hug:focus
     transition: none;
 }
 
+@media screen and (max-width : 550px){
+.privacy-policy-div
+{
+	margin-top: 25%;
+}
+}
+@media screen and (max-width : 400px){
+.privacy-policy-div,.header-content
+{
+	margin-top: 35%;
+}
+.donate-content{
+	padding-top: 35%;
+}
+}
+
+.authentication-container{
+	text-align: center;
+	margin: auto;
+	width: 30%;
+	height: 30%;
+	padding: 5% 5%;
+}
+.login-heading{
+	font-weight: 900;
+	color: rgb(66, 167, 244);
+}
+.authentication-inner-container,
+.authentication-submit-button{
+	margin-top: 8%;
+}
+/*.authentication-input{
+	maxlength:"10";
+}*/
+.authentication-label,
+.authentication-submit-button{
+	color: rgb(0,0,0);
+	font-weight: 800;
+}
+.authentication-submit-button{
+	padding: 2% 2%;
+	border-radius: 30%;
+}
+.forgot-password-link{
+	color: rgb(66, 167, 244); 
+}
+.authentication-warning{
+	color: rgb(255,0,0);
+}
+.logout-button{
+    line-height: 50px;
+    margin-right: 1%;
+}
+
 /************************************************************* Donate page ***************************************************/
 .donate-content{
 	position: relative;
@@ -662,8 +715,9 @@ a.mail-winter-hug:focus
 	font-size: 20px;
 	margin-top: 1.3em;
 	margin-bottom: 1.3em;
-	/*padding: 20px;*/
+	/*padding: 20px;
 }*/
+
 .donate-now{
 	height: auto;
 	align-content: center;
@@ -700,39 +754,20 @@ a.mail-winter-hug:focus
 	text-align: left;
 }
 
-/************************************************************* Login page ***************************************************/
-.authentication-container{
-	text-align: center;
-	margin: auto;
-	width: 30%;
-	height: 30%;
-	padding: 5% 5%;
+/************************************************************* blog form page ***************************************************/
+.blog-form{
+	display: block;
 }
-.login-heading{
-	font-weight: 900;
-	color: rgb(66, 167, 244);
+.form-input-topic,
+.form-input-text{
+	width: 100%;
 }
-.authentication-inner-container,
-.authentication-submit-button{
-	margin-top: 8%;
+.blog-form-container{
+	width: 80%;
+	text-align: left;
 }
-/*.authentication-input{
-	maxlength:"10";
-}*/
-.authentication-label,
-.authentication-submit-button{
-	color: rgb(0,0,0);
-	font-weight: 800;
-}
-.authentication-submit-button{
-	padding: 2% 2%;
-	border-radius: 30%;
-}
-.forgot-password-link{
-	color: rgb(66, 167, 244); 
-}
-.authentication-warning{
-	color: rgb(255,0,0);
+.blogform-inner-container{
+	margin-top: 4%;
 }
 /************************************************************* contact-us page ***************************************************/
 .contact-us-container{
@@ -756,22 +791,22 @@ a.mail-winter-hug:focus
 }
 
 @media screen and (max-width : 550px){
-.privacy-policy-div
-{
-	margin-top: 25%;
-}
+	.privacy-policy-div
+	{
+		margin-top: 25%;
+	}
 }
 @media screen and (max-width : 400px){
-.privacy-policy-div,.header-content
-{
-	margin-top: 35%;
-}
-.donate-content{
-	/*min-height: 60%;*/
-	padding-top: 35%;
-}
-.contact-us-container{
-	padding-top: 35%;
-	margin-bottom: 80%;
-}
+	.privacy-policy-div,.header-content
+	{
+		margin-top: 35%;
+	}
+	.donate-content{
+		/*min-height: 60%;*/
+		padding-top: 35%;
+	}
+	.contact-us-container{
+		padding-top: 35%;
+		margin-bottom: 80%;
+	}
 }

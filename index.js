@@ -15,7 +15,10 @@ var handle = {}
  handle['/contactus.html'] = requestHandlers.contactus;
 
  handle["/login.html"] = requestHandlers.login;
+ handle["/forgetpassword.html"] = requestHandlers.forgetpassword;
  handle["/dashboard.html"] = requestHandlers.dashboard;
+ handle["/blogform.html"] = requestHandlers.blogform;
+ handle["/newsform.html"] = requestHandlers.newsform;
  
  handle["/css/style.css"] = requestHandlers.style;
 
