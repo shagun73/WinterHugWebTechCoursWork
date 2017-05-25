@@ -6,7 +6,9 @@ var handle = {}
  handle["/"] = requestHandlers.index;
  handle["/index.html"] = requestHandlers.index;
  handle["/whatwedo.html"] = requestHandlers.whatwedo;
+ handle["/news.html"] = requestHandlers.news;
  handle["/whoweare.html"] = requestHandlers.whoweare;
+ handle["/blogs.html"] = requestHandlers.blog;
  handle["/getinvolved.html"] = requestHandlers.getinvolved;
  handle["/wherewework.html"] = requestHandlers.wherewework;
  handle["/cookiepolicy.html"] = requestHandlers.cookiepolicy;
@@ -34,6 +36,8 @@ var handle = {}
  handle["/img/linkimage/fullsize/whoweare.png"] = requestHandlers.whoWeAreImage;
  handle["/img/linkimage/fullsize/whatwedo.png"] = requestHandlers.whatwedoImage;
  handle["/img/linkimage/fullsize/contribute.png"] = requestHandlers.getInvolvedImage;
+
+ handle["/img/defaultprofile.png"] = requestHandlers.defaultprofile;
 
  handle["/img/news/foxnews1.jpg"] = requestHandlers.newsImage1;
  handle["/img/news/foxnews2.jpg"] = requestHandlers.newsImage2;

@@ -19,8 +19,29 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+ function blog(response, postData, pathname, type) {
+ 	 console.log("blog request is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+
+ function defaultprofile(response, postData, pathname, type) {
+ 	 console.log("default profile picture request is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+ 
  function whoweare(response, postData, pathname, type) {
  	 console.log("who we are html is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+
+ function news(response, postData, pathname, type) {
+ 	 console.log("news html is handled");
 	 var file = "./public" + pathname;
      fs.readFile(file, ready);
      function ready(err, content) { deliver(response, type, err, content); }
@@ -80,23 +101,28 @@ function whatwedo(response, postData, pathname, type) {
      fs.readFile(file, ready);
      function ready(err, content) { deliver(response, type, err, content); }
  }
- // handle["/forgetpassword.html"] = requestHandlers.forgetpassword;
+
  function dashboard(response, postData, pathname, type){
 	console.log("dashboard html request is handled");
 
 	var formData = querystring.parse(postData);
 	database.authentication(formData.username, formData.password, function(result){
+		console.log(result);
 		if(result == 1){
-			var file = "./public/admin" + pathname;
-			fs.readFile(file, ready);
-			function ready(err, content) { deliver(response, type, err, content);}
-		}else{
-			// content = '{"error" : "login details not currect"}';
-			content = "login details not currect";
-			// var JsonObj = JSON.parse(content);
-			type = "text/plain";
+			content = '{data:'+result.toString() +'}';
+			var json = JSON.stringify(eval("(" + content + ")"));
+			type = "application/json";
 			var err;
-			deliver(response, type, err, content);
+			deliver(response, type, err, json);
+			// var file = "./public/admin" + pathname;
+			// fs.readFile(file, ready);
+			// function ready(err, content) { deliver(response, type, err, content);}
+		}else{
+			content = '{data:'+result.toString() +'}';
+			var json = JSON.stringify(eval("(" + content + ")"));
+			type = "application/json";
+			var err;
+			deliver(response, type, err, json);
 		}
 	});
 }
@@ -257,7 +283,9 @@ function shareWarmthImage(response, postData, pathname, type){
 
  exports.index = index;
  exports.whatwedo = whatwedo;
+ exports.blog = blog;
  exports.whoweare = whoweare;
+ exports.news = news;
  exports.getinvolved = getinvolved;
  exports.wherewework = wherewework;
  exports.cookiepolicy = cookiepolicy;
@@ -284,6 +312,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.getInvolvedImage = getInvolvedImage;
  exports.donateImage = donateImage;
 
+ exports.defaultprofile = defaultprofile;
  exports.newsImage1 = newsImage1;
  exports.newsImage2 = newsImage2;
  exports.newsImage3 = newsImage3;
