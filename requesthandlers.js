@@ -159,6 +159,15 @@ function scriptLogin(response, postData, pathname, type){
 	function ready(err, content) { deliver(response, type, err, content);}
 }
 
+function scriptblogform(response, postData, pathname, type){
+	console.log("blogform script request is handled");	
+	var file = "./public" + pathname;
+	fs.readFile(file, ready);
+	function ready(err, content) { deliver(response, type, err, content);}
+}
+
+
+
 // *****************************************************************************images*****************************************************************************
 
 function headerImage(response, postData, pathname, type){
@@ -302,6 +311,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.style = style;
 
  exports.scriptLogin = scriptLogin;
+ exports.scriptblogform = scriptblogform;
 
  exports.headerImage = headerImage;
  exports.whoWeAreHeaderImage = whoWeAreHeaderImage;

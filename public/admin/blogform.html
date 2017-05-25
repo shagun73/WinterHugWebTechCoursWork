@@ -5,6 +5,8 @@
 	<title>WINTER HUG</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/blogform.js"></script>
 </head>
 <body id="login-page-top">
 	<nav id="mainNav" class="navbar">
@@ -17,21 +19,25 @@
 	</nav>
 	<div class="authentication-container blog-form-container">
 		<p class="link-heading login-heading">Winter Hug Blog</p>
-		<form action="/dashboard.html" method="post" id="authentication-form">
+		<!-- <form action="/dashboard.html" method="post" id="authentication-form"> -->
 			<div class="authentication-inner-container">
 				<label class="authentication-label blog-form">TOPIC : </label>
 	  			<input type="text" id="topic" name="title" maxlength="200" class="form-input-topic"/>
+	  			<p hidden="hidden" class="authentication-warning" id="blog-title-warning"></p>
 	  		</div>
 	  		<div class="authentication-inner-container blogform-inner-container">
 	  			<label class="authentication-label blog-form">TEXT : </label>
 	  			<textarea id="blog-text" name="blogText" maxlength="10000" class="form-input-text" rows="20"></textarea>
+	  			<p hidden="hidden" class="authentication-warning" id="blog-text-warning"></p>
 	  		</div>
 	  		<div class="authentication-inner-container blogform-inner-container">
 	  			<label class="authentication-label blog-form">YOUR IMAGE : </label>
 	  			<input type="file" name="pic" id="pic"/>
+	  			<p hidden="hidden" class="authentication-warning" id="blog-image-warning"></p>
 	  		</div>
-	  		<input type="submit" value="Submit" class="authentication-submit-button" id="blog-form-submit"/>
-		</form> 
+	  		<!-- <input type="submit" value="Submit" class="authentication-submit-button" id="blog-form-submit"/> -->
+	  		<button class="authentication-submit-button" id="blog-form-submit">Submit</button>
+		<!-- </form>  -->
 	</div>
 </body>
 </html>
