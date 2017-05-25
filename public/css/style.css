@@ -723,37 +723,85 @@ a.mail-winter-hug:focus
 	align-content: center;
 }
 /************************************************************* Donate Form ***************************************************/
-.donate-form{
+.donate-form-container{
 	/*margin-top: 10%;*/
-	height: 100%;
+	/*display: block;*/
+	height: auto;
 	width: 100%;
 	align-content: center;
-	background: url("../img/donate.jpg") no-repeat center center fixed;
+
+	/*background: url("../img/donate.jpg") no-repeat center center fixed;*/
 }
 .donate-form-content{
-	position: relative;
-	max-width: 80%;
-	min-height: 100%;
+	/*position: relative;*/
+	/*margin-top: 5%;*/
+	padding-top: 2%; 
+	max-width: 70%;
+	max-height: auto;
 	margin-left: 15%;
 	margin-right: 15%;
 	text-align: center;
 	/*margin-top: 15%;*/
-	z-index: 0;
+	/*z-index: 0;*/
 	align-content: center;
-	background-color: rgb(186, 187, 188);
+}
+.form-p{
+	display: block;
+	font-size: 18px;
+	text-align: left;
+	max-width: 100%;
+	margin-left: 0;
+}
+.donate-form{
+	width: 100%;
+	height: auto;
+	margin-bottom: 1%;
+	text-align: left;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.donate-display{
+	display: inline-grid;
+	padding-top: 10%;
+	/*margin-bottom: 1%;*/
 }
 .details-field-name{
-	color: rgb(0,0,0)
-	font-weight:600;
+	display: block;
+	float: left;
+	color: rgb(0,0,0);
+	font-size: 18px;
+	font-weight:700;
+	/*align-content: right;*/
+	text-align: right;
+	margin: auto;
+	width: 60%;
+	height: auto;
+	padding: 5% 5%;
+}
+.donate-input-entry{
+	/*margin-bottom: 2px;*/
+	/*float: right;*/
+	width: 80%;
+	height: auto;
+	display: block;
+	align-content:center;
 }
 .account-details{
 	font-weight: 400;
-	font-size: 25px;
+	font-size: 15px;
 	margin-top: 2px;
 	margin-bottom: 10px;
+	text-align: center;
+}
+.donate-form .checkbox-entry{
+	display: inline-block;	
+	width: auto;
+}
+.donate-form-para{
+	width: 90%;
 	text-align: left;
 }
-
+ 	
 /************************************************************* blog form page ***************************************************/
 .blog-form{
 	display: block;
