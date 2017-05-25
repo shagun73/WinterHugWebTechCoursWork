@@ -1,43 +1,43 @@
 $(document).ready(function(){
 
   $(document).ready(function() {
-    $('#topic').on('blur', function() {
-        if( $('#topic').val().length < 20){
-            $('#blog-title-warning').show();
-            $('#blog-title-warning').text("Topic should contain atleast 20 charactrs.");
+    $('#news-topic').on('blur', function() {
+        if( $('#news-topic').val().length < 20){
+            $('#news-title-warning').show();
+            $('#news-title-warning').text("Headline should contain atleast 20 charactrs.");
         }else{
-            $('#blog-title-warning').hide();
+            $('#news-title-warning').hide();
         }
     });
 
-    $('#blog-text').on('blur', function() {
-        if( $('#blog-text').val().length < 200){
-            $('#blog-text-warning').show();
-            $('#blog-text-warning').text("Content should contain atleast 200 charactrs.");
+    $('#news-text').on('blur', function() {
+        if( $('#news-text').val().length < 200){
+            $('#news-text-warning').show();
+            $('#news-text-warning').text("Content should contain atleast 200 charactrs.");
         }else{
-            $('#blog-text-warning').hide();
+            $('#news-text-warning').hide();
         }
     });
   });
 
-  $('#blog-form-submit').click(function(){
-    var ext = $('#blog-image-warning').val().split('.').pop().toLowerCase();
-    if( $('#topic').val().length < 20){
-          $('#blog-title-warning').show();
-          $('#blog-title-warning').text("Topic should contain atleast 20 charactrs.");
-    }else if ($('#blog-text').val().length < 200) {
-          $('#blog-text-warning').show();
-          $('#blog-text-warning').text("Content should contain atleast 200 charactrs.");
+  $('#news-form-submit').click(function(){
+    var ext = $('#news-image-warning').val().split('.').pop().toLowerCase();
+    if( $('#news-topic').val().length < 20){
+          $('#news-title-warning').show();
+          $('#news-title-warning').text("Headline should contain atleast 20 charactrs.");
+    }else if ($('#news-text').val().length < 200) {
+          $('#news-text-warning').show();
+          $('#news-text-warning').text("Content should contain atleast 200 charactrs.");
     }else if ($('#pic').get(0).files.length === 0) {
-          $('#blog-image-warning').show();
-          $('#blog-image-warning').text("No Image selected");
+          $('#news-image-warning').show();
+          $('#news-image-warning').text("No Image selected");
     }else if($.inArray(ext, ['png','jpg','jpeg']) == -1) {
-          $('#blog-image-warning').show();
-          $('#blog-image-warning').text("only images can be uploaded of type png, jpg, jpeg");
+          $('#news-image-warning').show();
+          $('#news-image-warning').text("only images can be uploaded of type png, jpg, jpeg");
     }else{
-          $('#blog-title-warning').hide();
-          $('#blog-image-warning').hide();
-          $('#blog-text-warning').hide();
+          $('#news-title-warning').hide();
+          $('#news-image-warning').hide();
+          $('#news-text-warning').hide();
       }
   });
   
