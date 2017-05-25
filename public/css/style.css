@@ -195,6 +195,9 @@ input[type=checkbox]:checked ~ #menu{
 		margin-right: 10%;
 		margin-top: 1%;
 	}
+	.donation-locations{
+		display: block;
+	}
 }
 .header-content,
 .header-content-non-home{
@@ -714,7 +717,11 @@ a.mail-winter-hug:focus
 	margin-bottom: 1.3em;
 	/*padding: 20px;
 }*/
-
+.donate-venue-list{
+	width: 100%;
+	display: block;
+	text-align: left;
+}
 .donate-now{
 	height: auto;
 	align-content: center;
