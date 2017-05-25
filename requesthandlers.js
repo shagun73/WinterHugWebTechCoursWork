@@ -40,6 +40,13 @@ function whatwedo(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+ function news(response, postData, pathname, type) {
+ 	 console.log("news html is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
+
  function getinvolved(response, postData, pathname, type) {
  	 console.log("get involved html page is handled");
 	 var file = "./public" + pathname;
@@ -100,17 +107,22 @@ function whatwedo(response, postData, pathname, type) {
 
 	var formData = querystring.parse(postData);
 	database.authentication(formData.username, formData.password, function(result){
+		console.log(result);
 		if(result == 1){
-			var file = "./public/admin" + pathname;
-			fs.readFile(file, ready);
-			function ready(err, content) { deliver(response, type, err, content);}
-		}else{
-			// content = '{"error" : "login details not currect"}';
-			content = "login details not currect";
-			// var JsonObj = JSON.parse(content);
-			type = "text/plain";
+			content = '{data:'+result.toString() +'}';
+			var json = JSON.stringify(eval("(" + content + ")"));
+			type = "application/json";
 			var err;
-			deliver(response, type, err, content);
+			deliver(response, type, err, json);
+			// var file = "./public/admin" + pathname;
+			// fs.readFile(file, ready);
+			// function ready(err, content) { deliver(response, type, err, content);}
+		}else{
+			content = '{data:'+result.toString() +'}';
+			var json = JSON.stringify(eval("(" + content + ")"));
+			type = "application/json";
+			var err;
+			deliver(response, type, err, json);
 		}
 	});
 }
@@ -273,6 +285,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.whatwedo = whatwedo;
  exports.blog = blog;
  exports.whoweare = whoweare;
+ exports.news = news;
  exports.getinvolved = getinvolved;
  exports.wherewework = wherewework;
  exports.cookiepolicy = cookiepolicy;

@@ -6,6 +6,7 @@ var handle = {}
  handle["/"] = requestHandlers.index;
  handle["/index.html"] = requestHandlers.index;
  handle["/whatwedo.html"] = requestHandlers.whatwedo;
+ handle["/news.html"] = requestHandlers.news;
  handle["/whoweare.html"] = requestHandlers.whoweare;
  handle["/blogs.html"] = requestHandlers.blog;
  handle["/getinvolved.html"] = requestHandlers.getinvolved;
