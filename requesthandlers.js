@@ -1,4 +1,4 @@
-var database = require("./public/js/server/database");
+var database = require("../WinterHugWebTechCW/database");
 var fs = require("fs");
 var OK = 200;
 
