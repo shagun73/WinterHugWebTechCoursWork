@@ -236,6 +236,12 @@ function scriptwhoweare(response, postData, pathname, type){
 	fs.readFile(file, ready);
 	function ready(err, content) { deliver(response, type, err, content);}
 }
+function scriptcookie(response, postData, pathname, type){
+	console.log("scriptcookie script request is handled");	
+	var file = "./public" + pathname;
+	fs.readFile(file, ready);
+	function ready(err, content) { deliver(response, type, err, content);}
+}
 
 // *****************************************************************************images*****************************************************************************
 
@@ -377,6 +383,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.dashboard = dashboard;
  exports.blogform = blogform;
  exports.newsform = newsform;
+ exports.scriptcookie = scriptcookie;
  exports.annualreport = annualreport;
 
  exports.authenticatefunction = authenticatefunction;
