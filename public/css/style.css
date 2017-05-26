@@ -143,7 +143,7 @@ li a {
 .show-menu {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration: none;
-	color: rgba(255,255,255);
+	color: rgb(255,255,255);
 	text-align: center;
 	padding: 15px;
 	display: none;
@@ -309,7 +309,7 @@ header {
 }
 .text-dark{
 	font-size: 20px;
-	font-style-color:rgb(0,0,0);
+	color:rgb(0,0,0);
     line-height: 1.5;
     max-width: 80%;
 	text-align: center;
@@ -361,7 +361,7 @@ header {
 	background-color: rgb(255,255,255);
 	padding: 15px 15px;
 	font-size: 20px;
-	font-weight: 700px;
+	font-weight: 700;
 	margin-top: 0px;
 }
 .bg-primary-news{		
@@ -715,9 +715,17 @@ a.mail-winter-hug:focus
 	margin-right: 5%;
 	margin-bottom: 0%;
 }
+/*.donate-options{
+	align-content: center;
+	font-size: 20px;
+	margin-top: 1.3em;
+	margin-bottom: 1.3em;
+	/*padding: 20px;
+}*/
 .donate-venue-list{
 	width: 100%;
 	display: block;
+	/*text-align: left;*/
 }
 .donate-now{
 	height: auto;
@@ -725,17 +733,25 @@ a.mail-winter-hug:focus
 }
 /************************************************************* Donate Form ***************************************************/
 .donate-form-container{
+	/*margin-top: 10%;*/
+	/*display: block;*/
 	height: auto;
 	width: 100%;
 	align-content: center;
+
+	/*background: url("../img/donate.jpg") no-repeat center center fixed;*/
 }
 .donate-form-content{
+	/*position: relative;*/
+	/*margin-top: 5%;*/
 	padding-top: 2%; 
 	max-width: 70%;
 	max-height: auto;
 	margin-left: 15%;
 	margin-right: 15%;
 	text-align: center;
+	/*margin-top: 15%;*/
+	/*z-index: 0;*/
 	align-content: center;
 }
 .form-p{
@@ -761,6 +777,10 @@ a.mail-winter-hug:focus
 .details-field-name{
 	display: block;
 	float: left;
+	/*color: rgb(0,0,0);
+	font-size: 18px;
+	font-weight:700;*/
+	/*align-content: right;*/
 	text-align: right;
 	margin: auto;
 	width: 60%;
@@ -768,12 +788,16 @@ a.mail-winter-hug:focus
 	padding: 5% 5%;
 }
 .donate-input-entry{
+	/*margin-bottom: 2px;*/
+	/*float: right;*/
 	width: 80%;
 	height: auto;
 	display: block;
 	align-content:center;
 }
 .account-details{
+	/*font-weight: 400;
+	font-size: 15px;*/
 	margin-top: 2px;
 	margin-bottom: 10px;
 	text-align: center;
@@ -814,6 +838,7 @@ a.mail-winter-hug:focus
 	margin-bottom: 0%;
 }
 .contact-details{
+	/*margin-left: 5%;*/
 	margin-top: 0;
 	align-content: center;
 	width: 100%;

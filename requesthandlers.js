@@ -81,6 +81,13 @@ function whatwedo(response, postData, pathname, type) {
      fs.readFile(file, ready);
      function ready(err, content) { deliver(response, type, err, content); }
  }
+ 
+ function donateportal(response, postData, pathname, type) {
+ 	console.log("donateportal html page is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
  function contactus(response, postData, pathname, type) {
  	console.log(" contactus html page is handled");
 	 var file = "./public" + pathname;
@@ -154,20 +161,6 @@ function style(response, postData, pathname, type){
 
 function scriptLogin(response, postData, pathname, type){
 	console.log("login script request is handled");	
-	var file = "./public" + pathname;
-	fs.readFile(file, ready);
-	function ready(err, content) { deliver(response, type, err, content);}
-}
-
-function scriptblogform(response, postData, pathname, type){
-	console.log("blogform script request is handled");	
-	var file = "./public" + pathname;
-	fs.readFile(file, ready);
-	function ready(err, content) { deliver(response, type, err, content);}
-}
-
-function scriptnewsform(response, postData, pathname, type){
-	console.log("news form script request is handled");	
 	var file = "./public" + pathname;
 	fs.readFile(file, ready);
 	function ready(err, content) { deliver(response, type, err, content);}
@@ -306,6 +299,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.donate = donate;
  exports.donateform = donateform;
  exports.contactus = contactus;
+ exports.donateportal = donateportal;
 
  exports.login = login;
  exports.forgetpassword = forgetpassword;
@@ -314,10 +308,10 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.newsform = newsform;
 
  exports.style = style;
-
- exports.scriptLogin = scriptLogin;
  exports.scriptblogform = scriptblogform;
  exports.scriptnewsform = scriptnewsform;
+
+ exports.scriptLogin = scriptLogin;
 
  exports.headerImage = headerImage;
  exports.whoWeAreHeaderImage = whoWeAreHeaderImage;

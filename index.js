@@ -15,6 +15,7 @@ var handle = {}
  handle["/donate.html"] = requestHandlers.donate;
  handle["/donateform.html"] = requestHandlers.donateform;
  handle['/contactus.html'] = requestHandlers.contactus;
+ handle["/donateportal.html"] = requestHandlers.donateportal;
 
  handle["/login.html"] = requestHandlers.login;
  handle["/forgetpassword.html"] = requestHandlers.forgetpassword;
