@@ -31,6 +31,7 @@ var handle = {}
  handle["/js/login.js"] = requestHandlers.scriptLogin;
  handle["/js/blogform.js"] = requestHandlers.scriptblogform
  handle["/js/newsform.js"] = requestHandlers.scriptnewsform;
+ handle["/js/cookie.js"] = requestHandlers.scriptcookie;
 
  handle["/img/main.jpg"] = requestHandlers.headerImage;
  handle["/img/about.jpg"] = requestHandlers.aboutImage;
