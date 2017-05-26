@@ -36,8 +36,23 @@ function blogEntry(topic, text, image, callback){
         }
       }); 
   });
+}
 
+function blogdataretrieval(callback){
+  "use strict"
+  var flag = 0;
+  db.serialize(function () {
+      db.all("SELECT * FROM blogs LIMIT 3", function (err, row) {
+        if (err){
+          console.log(err);
+          throw err;
+        }else{
+          callback(row);
+        }
+      }); 
+  });
 }
  
  exports.authentication = authentication;
  exports.blogEntry = blogEntry;
+ exports.blogdataretrieval = blogdataretrieval;

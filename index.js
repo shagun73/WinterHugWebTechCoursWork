@@ -28,10 +28,12 @@ var handle = {}
 
  handle["/authenticate.json"] = requestHandlers.authenticatefunction;
  handle["/blogentry.json"] = requestHandlers.functionblogentry;
+ handle["/whoweare.json"] = requestHandlers.functionwhoweare;
 
  handle["/js/login.js"] = requestHandlers.scriptLogin;
  handle["/js/blogform.js"] = requestHandlers.scriptblogform
  handle["/js/newsform.js"] = requestHandlers.scriptnewsform;
+ handle["/js/whoweare.js"] = requestHandlers.scriptwhoweare;
 
  handle["/img/main.jpg"] = requestHandlers.headerImage;
  handle["/img/about.jpg"] = requestHandlers.aboutImage;
@@ -46,9 +48,9 @@ var handle = {}
 
  handle["/img/defaultprofile.png"] = requestHandlers.defaultprofile;
 
- handle["/img/news/foxnews1.jpg"] = requestHandlers.newsImage1;
- handle["/img/news/foxnews2.jpg"] = requestHandlers.newsImage2;
- handle["/img/news/foxnews3.jpg"] = requestHandlers.newsImage3;
+ handle["/img/news/defaultpic.png"] = requestHandlers.defaultpric;
+ // handle["/img/news/foxnews2.jpg"] = requestHandlers.newsImage2;
+ // handle["/img/news/foxnews3.jpg"] = requestHandlers.newsImage3;
 
  handle["/img/socialmediaicon/facebook.png"] = requestHandlers.facebook;
  handle["/img/socialmediaicon/googleplus.png"] = requestHandlers.googleplus;
