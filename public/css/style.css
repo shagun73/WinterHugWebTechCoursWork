@@ -732,7 +732,7 @@ a.mail-winter-hug:focus
 .donate-form-content{
 	padding-top: 2%; 
 	max-width: 70%;
-	max-height: auto;
+	height: auto;
 	margin-left: 15%;
 	margin-right: 15%;
 	text-align: center;
