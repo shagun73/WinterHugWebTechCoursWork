@@ -88,6 +88,12 @@ function whatwedo(response, postData, pathname, type) {
      fs.readFile(file, ready);
      function ready(err, content) { deliver(response, type, err, content); }
  }
+ function annualreport(response, postData, pathname, type) {
+ 	console.log("donateportal html page is handled");
+	 var file = "./public" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
+ }
  function contactus(response, postData, pathname, type) {
  	console.log(" contactus html page is handled");
 	 var file = "./public" + pathname;
@@ -320,6 +326,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.dashboard = dashboard;
  exports.blogform = blogform;
  exports.newsform = newsform;
+ exports.annualreport = annualreport;
 
  exports.style = style;
  exports.scriptblogform = scriptblogform;

@@ -22,6 +22,7 @@ var handle = {}
  handle["/dashboard.html"] = requestHandlers.dashboard;
  handle["/blogform.html"] = requestHandlers.blogform;
  handle["/newsform.html"] = requestHandlers.newsform;
+ handle["/annualreport.html"] = requestHandlers.annualreport;
  
  handle["/css/style.css"] = requestHandlers.style;
 
