@@ -1,4 +1,5 @@
 var database = require("../WinterHugWebTechCW/database");
+var saveAs = require('file-saver');
 var fs = require("fs");
 var OK = 200;
 
@@ -158,6 +159,35 @@ function authenticatefunction(response, postData, pathname, type) {
 		}
 	});
  }
+
+ function functionblogentry(response, postData, pathname, type) {
+ 	 console.log("dashboard html request is handled");
+
+	var formData = querystring.parse(postData);
+	database.blogEntry(formData.topic, formData.text, formData.imageName, function(result){
+		if(result == 0){
+			// var arrayBuffer = formData.image;
+   //  		var bytes = new Uint8Array(arrayBuffer);
+
+   //  		saveAs(bytes, formData.imageName+".jpg");
+		}
+		if(result == 0){
+			content = '{data:'+result.toString() +'}';
+			var json = JSON.stringify(eval("(" + content + ")"));
+			type = "application/json";
+			var err;
+			deliver(response, type, err, json);
+		}
+		// }else{
+		// 	content = '{data:'+result.toString() +'}';
+		// 	var json = JSON.stringify(eval("(" + content + ")"));
+		// 	type = "application/json";
+		// 	var err;
+		// 	deliver(response, type, err, json);
+		// }
+	});
+ }
+ 
 // ************************************************************************************* css *********************************************************************
 
 function style(response, postData, pathname, type){
@@ -333,6 +363,7 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.annualreport = annualreport;
 
  exports.authenticatefunction = authenticatefunction;
+ exports.functionblogentry = functionblogentry;
 
  exports.style = style;
  exports.scriptblogform = scriptblogform;

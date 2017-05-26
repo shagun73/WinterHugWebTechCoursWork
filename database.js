@@ -23,4 +23,21 @@ function authentication(un, pass, callback) {
 	});
  }
 
+function blogEntry(topic, text, image, callback){
+  "use strict"
+  var flag = 0;
+  db.serialize(function () {
+      db.all("INSERT INTO blogs (title, content, date, imageName) VALUES(\'"+ topic + "\', \'" + text + "\',\'" + Date() + "\',\'" + image + "\')", function (err) {
+        if (err){
+          console.log(err);
+          throw err;
+        }else{
+          callback(flag);
+        }
+      }); 
+  });
+
+}
+ 
  exports.authentication = authentication;
+ exports.blogEntry = blogEntry;
