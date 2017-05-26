@@ -39,6 +39,9 @@ $(document).ready(function(){
           $('#blog-image-warning').hide();
           $('#blog-text-warning').hide();
       }
+
+
+    
   });
   
   // $('#submitButton').click(function(){

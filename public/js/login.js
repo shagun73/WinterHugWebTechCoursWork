@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  $('#authentication-warning').hide();
   $('#submitButton').click(function(){
 
         if( !$('#username').val() ) {
@@ -19,8 +20,17 @@ $(document).ready(function(){
                 async:false,
                 url: 'http://localhost:8080/authenticate.json',                      
                 success: function(response) {
-                    console.log(response);
-                    window.location.href = "http://localhost:8080/dashboard.html";                              
+                    var obj = JSON.parse(JSON.stringify(response));
+                    if(obj.data == 1){
+                      $('#username').val("");
+                      $('#password').val("");
+                      window.location.href = "http://localhost:8080/dashboard.html";
+                    }else{
+                        $('#authentication-warning').show();
+                        $('#authentication-warning').text("No such account exist.");
+                        $('#username').val("");
+                        $('#password').val("");
+                    }                            
                 },
                 error: function(error) {
                     console.log("some error in fetching the notifications");
