@@ -138,12 +138,22 @@ function blogform(response, postData, pathname, type) {
  }
 
 // ************************************************************************************* json *********************************************************************
+
+function functionwhoweare(response, postData, pathname, type) {
+ 	console.log("dashboard html request is handled");
+	database.blogdataretrieval(function(result){
+			// console.log(result.tostring());
+			type = "application/json";
+			var err;
+			deliver(response, type, err, result.tostring());
+	});
+ }
 function authenticatefunction(response, postData, pathname, type) {
  	 console.log("dashboard html request is handled");
 
 	var formData = querystring.parse(postData);
 	database.authentication(formData.username, formData.password, function(result){
-		console.log(result);
+		// console.log(result);
 		if(result == 1){
 			content = '{data:'+result.toString() +'}';
 			var json = JSON.stringify(eval("(" + content + ")"));
@@ -220,6 +230,13 @@ function scriptnewsform(response, postData, pathname, type){
 	function ready(err, content) { deliver(response, type, err, content);}
 }
 
+function scriptwhoweare(response, postData, pathname, type){
+	console.log("scriptwhoweare script request is handled");	
+	var file = "./public" + pathname;
+	fs.readFile(file, ready);
+	function ready(err, content) { deliver(response, type, err, content);}
+}
+
 // *****************************************************************************images*****************************************************************************
 
 function headerImage(response, postData, pathname, type){
@@ -274,24 +291,24 @@ function getInvolvedImage(response, postData, pathname, type){
 	function ready(err, content) { deliver(response, type, err, content);}
 }
 
-function newsImage1(response, postData, pathname, type){
+function defaultpric(response, postData, pathname, type){
 	console.log("newsImage1 Image request is handled");	
 	var file = "./public" + pathname;
 	fs.readFile(file, ready);
 	function ready(err, content) { deliver(response, type, err, content);}
 }
-function newsImage2(response, postData, pathname, type){
-	console.log("newsImage2 Image request is handled");	
-	var file = "./public" + pathname;
-	fs.readFile(file, ready);
-	function ready(err, content) { deliver(response, type, err, content);}
-}
-function newsImage3(response, postData, pathname, type){
-	console.log("newsImage3 Image request is handled");	
-	var file = "./public" + pathname;
-	fs.readFile(file, ready);
-	function ready(err, content) { deliver(response, type, err, content);}
-}
+// function newsImage2(response, postData, pathname, type){
+// 	console.log("newsImage2 Image request is handled");	
+// 	var file = "./public" + pathname;
+// 	fs.readFile(file, ready);
+// 	function ready(err, content) { deliver(response, type, err, content);}
+// }
+// function newsImage3(response, postData, pathname, type){
+// 	console.log("newsImage3 Image request is handled");	
+// 	var file = "./public" + pathname;
+// 	fs.readFile(file, ready);
+// 	function ready(err, content) { deliver(response, type, err, content);}
+// }
 function facebook(response, postData, pathname, type){
 	console.log("facebook Image request is handled");	
 	var file = "./public" + pathname;
@@ -364,10 +381,12 @@ function shareWarmthImage(response, postData, pathname, type){
 
  exports.authenticatefunction = authenticatefunction;
  exports.functionblogentry = functionblogentry;
+ exports.functionwhoweare = functionwhoweare;
 
  exports.style = style;
  exports.scriptblogform = scriptblogform;
  exports.scriptnewsform = scriptnewsform;
+ exports.scriptwhoweare = scriptwhoweare;
 
  exports.scriptLogin = scriptLogin;
 
@@ -381,9 +400,9 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.donateImage = donateImage;
 
  exports.defaultprofile = defaultprofile;
- exports.newsImage1 = newsImage1;
- exports.newsImage2 = newsImage2;
- exports.newsImage3 = newsImage3;
+ exports.defaultpric = defaultpric;
+ // exports.newsImage2 = newsImage2;
+ // exports.newsImage3 = newsImage3;
 
  exports.facebook = facebook;
  exports.googleplus = googleplus;
