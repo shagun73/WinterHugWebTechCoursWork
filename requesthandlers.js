@@ -116,28 +116,10 @@ function whatwedo(response, postData, pathname, type) {
  }
 
  function dashboard(response, postData, pathname, type){
-	console.log("dashboard html request is handled");
-
-	var formData = querystring.parse(postData);
-	database.authentication(formData.username, formData.password, function(result){
-		console.log(result);
-		if(result == 1){
-			content = '{data:'+result.toString() +'}';
-			var json = JSON.stringify(eval("(" + content + ")"));
-			type = "application/json";
-			var err;
-			deliver(response, type, err, json);
-			// var file = "./public/admin" + pathname;
-			// fs.readFile(file, ready);
-			// function ready(err, content) { deliver(response, type, err, content);}
-		}else{
-			content = '{data:'+result.toString() +'}';
-			var json = JSON.stringify(eval("(" + content + ")"));
-			type = "application/json";
-			var err;
-			deliver(response, type, err, json);
-		}
-	});
+	console.log("dashboard html page is handled");
+	 var file = "./public/admin" + pathname;
+     fs.readFile(file, ready);
+     function ready(err, content) { deliver(response, type, err, content); }
 }
 
 function blogform(response, postData, pathname, type) {
@@ -154,6 +136,28 @@ function blogform(response, postData, pathname, type) {
      function ready(err, content) { deliver(response, type, err, content); }
  }
 
+// ************************************************************************************* json *********************************************************************
+function authenticatefunction(response, postData, pathname, type) {
+ 	 console.log("dashboard html request is handled");
+
+	var formData = querystring.parse(postData);
+	database.authentication(formData.username, formData.password, function(result){
+		console.log(result);
+		if(result == 1){
+			content = '{data:'+result.toString() +'}';
+			var json = JSON.stringify(eval("(" + content + ")"));
+			type = "application/json";
+			var err;
+			deliver(response, type, err, json);
+		}else{
+			content = '{data:'+result.toString() +'}';
+			var json = JSON.stringify(eval("(" + content + ")"));
+			type = "application/json";
+			var err;
+			deliver(response, type, err, json);
+		}
+	});
+ }
 // ************************************************************************************* css *********************************************************************
 
 function style(response, postData, pathname, type){
@@ -327,6 +331,8 @@ function shareWarmthImage(response, postData, pathname, type){
  exports.blogform = blogform;
  exports.newsform = newsform;
  exports.annualreport = annualreport;
+
+ exports.authenticatefunction = authenticatefunction;
 
  exports.style = style;
  exports.scriptblogform = scriptblogform;
